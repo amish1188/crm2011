@@ -1,0 +1,246 @@
+﻿body {
+    font-size: 16px;
+    background-color: #F2F2F2;
+    font-family: "Segoe UI";
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+input[type="text"]:disabled {
+    background: rgba(239, 239, 239, 0.3);
+    border: 1px solid rgba(118, 118, 118, 0.3);
+}
+
+.Row {
+    display:flex;
+    width: 100%;
+    align-items: end;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.RadioButonError{}
+
+.RadioButonError .control {
+    border: #EC0101 1.5px solid;
+}
+
+.Container > * {
+    margin: 1rem;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #FFF;
+    border-radius: 2px;
+    padding: 2rem 3rem;
+    box-sizing:border-box;
+    max-width: 1000px;
+    min-width: 700px;
+    position: relative;
+}
+
+.Card > * {
+    margin-bottom: 1.5rem;
+}
+
+.FAB {
+    position: fixed;
+    bottom: 32px;
+    right: calc(50% - 460px);
+    display: flex;
+    width: 200px;
+    align-items: center;
+    box-shadow: 1px 2px 3px #b2abab;
+    background-color: #e41b65;
+    padding: 15px 12px;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+    .FAB:hover {
+       background-color: #c51656;
+    }
+
+.FAB:active {
+    background-color: #b22852;
+}
+
+.ErrorMessageContainer {
+    background-color: #FDEBEC;
+    color: #625E5C;
+    padding: 0.7rem;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width:90%;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid #EC0101;
+    margin-bottom: 10px;
+    max-width:1000px;
+}
+
+.ErrorMessageContainer img {
+    width: 20px;
+}
+
+.FieldContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.Wrapper {
+    box-shadow: 0px 0px 4px #dbdbdb;
+    padding: 0 1rem;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    min-width: 600px;
+}
+
+    .Wrapper > div + div {
+        border-top: 1px solid #e8e8e8;
+    }
+
+.WrapperError {
+    border-radius: 3px;
+    border: 1px solid #EC0101;
+}
+
+
+    .FieldContainer ul {
+        background-color: #FFF;
+        box-sizing: border-box;
+        list-style: none;
+        width: 250px;
+        position: absolute;
+        z-index: 1000;
+        top: 50px;
+        padding: 0.2rem 0;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+        border-radius: 3px;
+    }
+
+    .FieldContainer ul li {
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    .FieldContainer ul li ::before {
+        content: "";
+        display: block;
+        left: 0px;
+        width: 3px;
+        background: #036ec9;
+    }
+
+        .suggestion-active,
+        .FieldContainer ul li:hover {
+            background-color: #f3f3f3;
+            cursor: pointer;
+        }
+            .suggestion-active::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 5px;
+                width: 3px;
+                height: 1rem;
+                top: 30%;
+                background-color: #036ec9;
+                border-radius: 60px;
+            }
+
+
+.FieldContainer  > label, span {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.Select {
+    max-width: 350px;
+}
+
+.SelectError {
+    border: 2px solid #EC0101;
+}
+
+.TextArea {
+    box-sizing: border-box;
+    width: 350px;
+    line-height: 20px;
+    border-radius: 3px;
+    outline: none;
+    background: linear-gradient(#036ac4, #036ac4) bottom / 0% 2px no-repeat;
+    transition: 250ms;
+    padding: 6px 9px;
+}
+
+.TextArea:focus {
+        background-size: 100% 2px;
+        border-bottom: none;
+}
+
+.TextAreaDefault {
+    border: 1px solid #e6e6e6;
+    border-bottom: 1px solid #808080;
+}
+
+.TextAreaError {
+    border: 1px solid #EC0101;
+    border-bottom: 1px solid #EC0101;
+}
+
+.ErrorMessage {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #EC0101;
+    width: 350px;
+    background-color: #FEEAED;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.ModalContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.Modal {
+    position: absolute;
+    max-width: 50%;
+    max-height: 70%;
+    z-index: 1001;
+}
+
+.Backdrop {
+    position:absolute;
+    background-color: black;
+    opacity: 0.8;
+    width: 100%;
+    height:100%;
+    z-index: 1000;
+}
+
+@media only screen and (max-width: 1150px) {
+    .FAB {
+        right: calc(10% - 0px);
+    }
+}
